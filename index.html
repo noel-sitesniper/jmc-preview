@@ -95,9 +95,12 @@ h2.section-title span{color:var(--bl)}
 .cdot.on{background:var(--bl);width:24px;border-radius:5px}
 /* REVIEWS CAROUSEL */
 .reviews-section{background:#fff}
-.rev-carousel-wrap{position:relative;max-width:1080px;margin:0 auto}
-.rev-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}.rev-track::-webkit-scrollbar{display:none}
-.review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;flex:0 0 calc(33.333% - 14px);min-width:280px;scroll-snap-align:start}@media(max-width:680px){.review-card{flex:0 0 calc(85vw);min-width:unset}}
+.rev-cw{position:relative;overflow:hidden;border-radius:16px}
+.rev-ct{display:flex;gap:0;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.rev-slide{flex:0 0 100%;padding:0}
+@media(min-width:768px){.rev-slide{flex:0 0 33.333%}}
+.rev-track{display:none}
+.review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;width:100%}
 @media(max-width:900px){.review-card{flex:0 0 calc(50% - 10px);min-width:calc(50% - 10px)}}
 @media(max-width:580px){.review-card{flex:0 0 100%;min-width:100%}}
 .rev-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px}
@@ -307,7 +310,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
         <img src="https://images.pexels.com/photos/6471913/pexels-photo-6471913.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC technician servicing AC unit"/>
         <img src="https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Outdoor HVAC condensing units"/>
         <img src="https://images.pexels.com/photos/6471914/pexels-photo-6471914.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC installation"/>
-        <img src="https://images.pexels.com/photos/6471913/pexels-photo-6471913.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&fit=crop" alt="HVAC service technician"/>
+        <img src="https://images.pexels.com/photos/8293651/pexels-photo-8293651.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Furnace repair and service"/>
       </div>
       <button class="cbtn cprev" id="cprev">&#8249;</button>
       <button class="cbtn cnext" id="cnext">&#8250;</button>
@@ -320,46 +323,20 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
     <div class="section-label">WHAT CUSTOMERS SAY</div>
     <h2 class="section-title">Real Reviews from <span>Real Customers</span></h2>
     <p class="section-sub">90+ reviews on HomeAdvisor &amp; Yelp. Here's what Olive Branch homeowners say about JMC.</p>
-    <div class="rev-carousel-wrap">
-      <div class="rev-track" id="revTrack">
-        <div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div></div>
-        <div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Always professional and on time with services. My first call for anything HVAC-related in Olive Branch.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem and repaired my AC unit quickly and with ease. He was detail oriented. I would utilize his services again.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">They were very professional and actually came to the job 30 minutes before the original appointment time.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again and refer him to friends and neighbors.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Mr. Jamal responded quicker than I expected. He's very courteous and knowledgeable. He arrived on time and repaired my gas fireplace in a matter of minutes. I will definitely contact his company again.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">LaShonda C.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2024</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable.</p><div class="reviewer"><div class="reviewer-av">J</div><div><div class="reviewer-name">Jack H.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2024</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Was quick, friendly, and really went above and beyond to help us. We'd absolutely recommend him to anyone.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Melinda T.</div><div class="reviewer-src">✓ HomeAdvisor · Dec 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Great prompt service and Mr. Jamal was so friendly and helpful. We'll be telling others about this great company.</p><div class="reviewer"><div class="reviewer-av">E</div><div><div class="reviewer-name">Eddie H.</div><div class="reviewer-src">✓ HomeAdvisor · Nov 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Mr. Jamal was very thorough in troubleshooting the issue with my gas fireplace. Once he discovered the issue, he fixed it immediately. Very knowledgeable, very affordable. I will be utilizing his services again.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Rodney R.</div><div class="reviewer-src">✓ HomeAdvisor · Nov 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Very kind, came out right away, explained everything, fixed my issue. Highly recommend.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammy T.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">I really enjoyed talking with Mr. Jamal Jawhar. The price was good and it didn't take long. I will be calling again and telling my family about my good experience with this company.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sarah N.</div><div class="reviewer-src">✓ HomeAdvisor · Feb 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Great communication, arrived on time and got right to it. Before the appointment the work was clarified and pertinent questions asked.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Suzanne S.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal is a great guy — arrived when promised, checked in to confirm we were there, got right to work, and resolved our problem.</p><div class="reviewer"><div class="reviewer-av">G</div><div><div class="reviewer-name">Gregory R.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Arrived on time and went to work immediately. Diagnosed the problem quickly and accurately. He was expedient and efficient.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Michael M.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2022</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC are punctual, friendly, knowledgeable, and honest. They fixed my gas furnace when it quit in the middle of winter and my A/C compressor when it went out in the summer. They're definitely the go-to.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Mike D.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
-      </div><p class="rcq">Very knowledgeable and well equipped. He was polite, well mannered, and triple checked to make sure my fireplace was fully functional. My family and I were extremely grateful — this was during a winter storm warning. He was fast and reliable.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2026</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem and repaired my AC unit quickly and with ease. He was detail oriented. I would utilize his services again and refer him to others.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">They were very professional and actually came to the job 30 minutes before the original appointment time.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again and refer him to friends and neighbors.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Mr. Jamal responded quicker than I expected. He's very courteous and knowledgeable. He arrived on time and repaired my gas fireplace in a matter of minutes. I will definitely contact his company again.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">LaShonda C.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2024</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable.</p><div class="reviewer"><div class="reviewer-av">J</div><div><div class="reviewer-name">Jack H.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2024</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Was quick, friendly, and really went above and beyond to help us. We'd absolutely recommend him to anyone.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Melinda T.</div><div class="reviewer-src">✓ HomeAdvisor · Dec 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Great prompt service and Mr. Jamal was so friendly and helpful with all the services. We'll be telling others about this great company.</p><div class="reviewer"><div class="reviewer-av">E</div><div><div class="reviewer-name">Eddie H.</div><div class="reviewer-src">✓ HomeAdvisor · Nov 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Mr. Jamal was very thorough in troubleshooting the issue with my gas fireplace. Once he discovered the issue, he fixed it immediately. Very good customer service. Very knowledgeable. Very affordable. I will be utilizing his services again and recommend him to others.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Rodney R.</div><div class="reviewer-src">✓ HomeAdvisor · Nov 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Very kind, came out right away, explained everything, fixed my issue. Highly recommend.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammy T.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">I really enjoyed talking with Mr. Jamal Jawhar. The price was good and it didn't take long. I will be calling again and will tell my family members about my good experience with this company.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sarah N.</div><div class="reviewer-src">✓ HomeAdvisor · Feb 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Great communication, arrived on time and got right to it. Before the appointment the work was clarified and pertinent questions asked.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Suzanne S.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal is a great guy — arrived when promised, checked in before to confirm we were there, got right to work, and resolved our problem.</p><div class="reviewer"><div class="reviewer-av">G</div><div><div class="reviewer-name">Gregory R.</div><div class="reviewer-src">✓ HomeAdvisor · Jan 2023</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Arrived on time and went to work immediately. Diagnosed the problem quickly and accurately. He was expedient and efficient.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Michael M.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2022</div></div></div></div>
-        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC are punctual, friendly, knowledgeable, and honest. They fixed my gas furnace when it quit in the middle of winter, and my A/C compressor when it went out in the summer. They're definitely the go-to.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Mike D.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
+    <div style="position:relative;max-width:1080px;margin:0 auto">
+      <div class="rev-cw" id="revWrap">
+        <div class="rev-ct" id="revTrack2">
+          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div></div>
+          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Always professional and on time with services. My first call for anything HVAC-related in Olive Branch.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem and repaired my AC unit quickly and with ease. He was detail oriented. I would utilize his services again.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div></div>
+          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">They were very professional and actually came to the job 30 minutes before the original appointment time.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div></div>
+          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again and refer him to friends and neighbors.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div></div>
+        </div>
       </div>
-    </div>
-    <div class="rev-nav">
-      <button class="rev-btn" id="revPrev">&#8249;</button>
-      <div class="rev-dots" id="revDots" style="display:none"></div>
-      <button class="rev-btn" id="revNext">&#8250;</button>
+      <div class="cnav" id="revNav"></div>
+      <button class="cbtn cprev" id="revPrev2">&#8249;</button>
+      <button class="cbtn cnxt" id="revNext2">&#8250;</button>
     </div>
   </div>
 </section>
@@ -431,16 +408,45 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 
 // REVIEWS CAROUSEL
 (function(){
-  var track=document.getElementById('revTrack');
-  var prevBtn=document.getElementById('revPrev');
-  var nextBtn=document.getElementById('revNext');
+  var track=document.getElementById('revTrack2');
+  var nav=document.getElementById('revNav');
+  var prevBtn=document.getElementById('revPrev2');
+  var nextBtn=document.getElementById('revNext2');
   if(!track)return;
-  function scrollAmt(){
-    var card=track.querySelector('.review-card');
-    return card ? card.offsetWidth+20 : 300;
+  var slides=track.querySelectorAll('.rev-slide');
+  var total=slides.length;
+  var cur=0;
+  function getCols(){return window.innerWidth>=768?3:1;}
+  var cols=getCols();
+  var pages=Math.ceil(total/cols);
+  function buildDots(){
+    nav.innerHTML='';
+    for(var i=0;i<pages;i++){(function(idx){
+      var d=document.createElement('button');
+      d.className='cd'+(idx===0?' on':'');
+      d.onclick=function(){goPage(idx)};
+      nav.appendChild(d);
+    })(i);}
   }
-  if(prevBtn)prevBtn.onclick=function(){track.scrollBy({left:-scrollAmt(),behavior:'smooth'})};
-  if(nextBtn)nextBtn.onclick=function(){track.scrollBy({left:scrollAmt(),behavior:'smooth'})};
+  function goPage(n){
+    cur=Math.max(0,Math.min(n,pages-1));
+    var slideW=track.parentElement.offsetWidth/cols;
+    track.style.transform='translateX(-'+(cur*cols*slideW)+'px)';
+    nav.querySelectorAll('.cd').forEach(function(d,i){d.classList.toggle('on',i===cur)});
+    if(prevBtn)prevBtn.style.opacity=cur===0?'0.3':'1';
+    if(nextBtn)nextBtn.style.opacity=cur===pages-1?'0.3':'1';
+    if(prevBtn)prevBtn.style.pointerEvents=cur===0?'none':'auto';
+    if(nextBtn)nextBtn.style.pointerEvents=cur===pages-1?'none':'auto';
+  }
+  var sx=0;
+  track.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},false);
+  track.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>40)goPage(cur+(dx<0?1:-1));
+  },false);
+  window.addEventListener('resize',function(){cols=getCols();pages=Math.ceil(total/cols);cur=0;buildDots();track.style.transform='translateX(0)';});
+  buildDots();
+  goPage(0);
 })();
 
 // COUNTDOWN
