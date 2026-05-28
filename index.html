@@ -11,22 +11,16 @@
 :root{--bl:#0ea5e9;--dk:#020817;--dk2:#0f172a;--lt:#f0f9ff;--gold:#fbbf24;--ac:#38bdf8}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:#1e293b;overflow-x:hidden;background:#fff;padding-top:52px;padding-bottom:120px}
-
-/* TOP BANNER */
 #sntop{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(135deg,#020817,#0f172a);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:'Inter',sans-serif;box-shadow:0 2px 20px rgba(0,0,0,.4)}
 #sntop .lb{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
 #sntop .bj{background:var(--bl);color:#fff;font-weight:800;font-size:10px;padding:3px 10px;border-radius:20px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;letter-spacing:.5px}
 #sntop .tx{font-size:12px;color:#94a3b8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #sntop .go{background:linear-gradient(135deg,var(--bl),#0284c7);color:#fff;font-weight:800;font-size:12px;padding:8px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0}
-
-/* NAV */
 nav{position:fixed;top:52px;width:100%;z-index:500;padding:14px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(2,8,23,.96);backdrop-filter:blur(14px)}
 .nav-logo{color:#fff;font-size:1.1rem;font-weight:900;letter-spacing:-.3px}
 .nav-logo span{color:var(--bl)}
 .nav-cta{background:var(--bl);color:#fff;padding:9px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.85rem}
-@media(max-width:640px){nav{padding:12px 20px}.nav-logo{font-size:.95rem;flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.nav-cta{white-space:nowrap;flex-shrink:0;font-size:.8rem;padding:8px 14px}}
-
-/* HERO */
+@media(max-width:640px){nav{padding:12px 20px}.nav-logo{font-size:.95rem}.nav-cta{font-size:.8rem;padding:8px 14px}}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0}
@@ -49,28 +43,20 @@ nav{position:fixed;top:52px;width:100%;z-index:500;padding:14px 40px;display:fle
 .btn-primary{background:linear-gradient(135deg,var(--bl),#0284c7);color:#fff;padding:15px 34px;border-radius:10px;text-decoration:none;font-weight:800;font-size:1rem;box-shadow:0 6px 24px rgba(14,165,233,.5)}
 .btn-ghost{background:rgba(255,255,255,.08);color:#fff;padding:15px 34px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.2)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-
-/* SCROLL INDICATOR */
 .hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2}
 .hsd{width:26px;height:42px;border:2px solid rgba(255,255,255,.3);border-radius:13px;display:flex;align-items:flex-start;justify-content:center;padding-top:5px}
 .hsd::after{content:'';width:4px;height:10px;background:var(--bl);border-radius:2px;animation:scrollDot 1.6s ease-in-out infinite}
 @keyframes scrollDot{0%{transform:translateY(0);opacity:1}100%{transform:translateY(14px);opacity:0}}
 @media(max-width:600px){.hscroll{display:none}}
-
-/* TRUST BAR */
 .trust-bar{background:linear-gradient(135deg,var(--bl),#0284c7);padding:14px 20px}
 .trust-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:8px}
 .trust-item{color:#fff;font-weight:700;font-size:.82rem;display:flex;align-items:center;gap:6px}
-
-/* LAYOUT */
 .container{max-width:1080px;margin:0 auto;padding:0 24px}
 section{padding:90px 24px}
 .section-label{display:inline-block;color:var(--bl);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px}
 h2.section-title{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;color:var(--dk);line-height:1.08;margin-bottom:16px;letter-spacing:-.5px}
 h2.section-title span{color:var(--bl)}
 .section-sub{color:#64748b;font-size:.98rem;line-height:1.75;max-width:560px;margin-bottom:52px}
-
-/* SERVICES */
 .services-section{background:var(--lt)}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .service-card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 2px 20px rgba(0,0,0,.05);border:1px solid #e0f2fe;transition:all .35s}
@@ -78,15 +64,11 @@ h2.section-title span{color:var(--bl)}
 .service-icon{font-size:2.4rem;margin-bottom:16px;display:block}
 .service-card h3{font-size:1.02rem;font-weight:800;color:var(--dk);margin-bottom:10px}
 .service-card p{color:#64748b;font-size:.87rem;line-height:1.7}
-
-/* STATS */
+/* STATS — all light blue */
 .stats-section{background:linear-gradient(135deg,var(--dk),var(--dk2));padding:72px 24px}
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;max-width:900px;margin:0 auto;text-align:center}
-.stat-number{font-size:3.2rem;font-weight:900;color:#fff;line-height:1;margin-bottom:6px}
-.stat-number span{color:var(--bl)}
-.stat-label{color:rgba(255,255,255,.45);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.8px}
-
-/* WHY */
+.stat-number{font-size:3.2rem;font-weight:900;color:var(--bl);line-height:1;margin-bottom:6px}
+.stat-label{color:var(--ac);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.8px}
 .why-section{background:#fff}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1080px;margin:0 auto}
 .why-img-wrap{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3}
@@ -101,8 +83,6 @@ h2.section-title span{color:var(--bl)}
 .why-item h4{font-size:.95rem;font-weight:800;color:var(--dk);margin-bottom:4px}
 .why-item p{font-size:.85rem;color:#64748b;line-height:1.65}
 @media(max-width:768px){.why-grid{grid-template-columns:1fr;gap:40px}.why-img-wrap{display:none}}
-
-/* GALLERY */
 .gallery-section{background:var(--lt);overflow:hidden}
 .carousel-outer{position:relative;max-width:1080px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.1)}
 .carousel-inner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
@@ -113,21 +93,27 @@ h2.section-title span{color:var(--bl)}
 .cdots{display:flex;justify-content:center;gap:8px;margin-top:18px}
 .cdot{width:9px;height:9px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:all .3s}
 .cdot.on{background:var(--bl);width:24px;border-radius:5px}
-
-/* REVIEWS */
+/* REVIEWS CAROUSEL */
 .reviews-section{background:#fff}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;position:relative}
-.review-stars{color:var(--gold);font-size:1.1rem;letter-spacing:2px;margin-bottom:14px}
-.rcq{color:#374151;font-size:.9rem;line-height:1.75;margin-bottom:18px;font-style:italic;padding-left:18px;position:relative}
-.rcq::before{content:'\201C';position:absolute;left:0;top:-2px;font-size:1.9rem;color:var(--bl);line-height:1;font-style:normal}
-.rcq::after{content:'\201D';font-size:1.9rem;color:var(--bl);line-height:1;font-style:normal;vertical-align:bottom}
-.reviewer{display:flex;align-items:center;gap:12px}
-.reviewer-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--bl),#0284c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1rem}
-.reviewer-name{font-weight:700;font-size:.88rem;color:var(--dk)}
-.reviewer-src{font-size:.76rem;color:#9ca3af}
-
-/* CONTACT */
+.rev-carousel-wrap{position:relative;max-width:1080px;margin:0 auto;overflow:hidden}
+.rev-track{display:flex;gap:20px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;flex:0 0 calc(33.333% - 14px);min-width:calc(33.333% - 14px)}
+@media(max-width:900px){.review-card{flex:0 0 calc(50% - 10px);min-width:calc(50% - 10px)}}
+@media(max-width:580px){.review-card{flex:0 0 100%;min-width:100%}}
+.rev-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px}
+.rev-btn{background:var(--lt);border:1.5px solid #bae6fd;border-radius:50%;width:40px;height:40px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--bl)}
+.rev-btn:hover{background:var(--bl);color:#fff;border-color:var(--bl)}
+.rev-dots{display:flex;gap:8px}
+.rev-dot{width:8px;height:8px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:all .3s}
+.rev-dot.on{background:var(--bl);width:20px;border-radius:4px}
+.review-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:12px}
+.rcq{color:#374151;font-size:.88rem;line-height:1.75;margin-bottom:16px;font-style:italic;padding-left:16px;position:relative}
+.rcq::before{content:'\201C';position:absolute;left:0;top:-2px;font-size:1.7rem;color:var(--bl);line-height:1;font-style:normal}
+.rcq::after{content:'\201D';font-size:1.7rem;color:var(--bl);line-height:1;font-style:normal;vertical-align:bottom}
+.reviewer{display:flex;align-items:center;gap:10px}
+.reviewer-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--bl),#0284c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.95rem;flex-shrink:0}
+.reviewer-name{font-weight:700;font-size:.86rem;color:var(--dk)}
+.reviewer-src{font-size:.74rem;color:#9ca3af}
 .contact-section{background:var(--lt)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:1080px;margin:0 auto;align-items:start}
 .contact-form{background:#fff;border-radius:22px;padding:40px;box-shadow:0 4px 24px rgba(14,165,233,.08);border:1px solid #e0f2fe}
@@ -141,8 +127,6 @@ h2.section-title span{color:var(--bl)}
 .contact-detail h4{font-weight:700;font-size:.9rem;color:var(--dk);margin-bottom:2px}
 .contact-detail p{font-size:.85rem;color:#64748b}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
-
-/* FOOTER */
 footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 .footer-inner{max-width:1080px;margin:0 auto}
 .footer-brand{font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:8px}
@@ -151,27 +135,21 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}
 .footer-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.85rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.8rem}
-
-/* BOTTOM BAR */
 #snbot{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#fff;border-top:3px solid var(--bl);padding:8px 16px;font-family:'Inter',system-ui,sans-serif;box-shadow:0 -4px 30px rgba(0,0,0,.15);display:flex;flex-direction:column;gap:6px}
 #snbot-row1{display:flex;align-items:center;justify-content:space-between;gap:8px}
-#snbot-price{text-align:right}
 #snbot-price .was{font-size:10px;color:#9ca3af;text-decoration:line-through}
 #snbot-price .now{font-size:22px;font-weight:800;color:#020817;line-height:1}
 #snbot-price .sub{font-size:10px;color:#6b7280}
+#snbot-price .rec{font-size:10px;color:var(--bl);font-weight:700}
 #snbot-row2{display:flex}
-#snbot-row2 .cta{flex:1;text-align:center}
-#snbot .twr{display:flex;align-items:center;gap:5px;font-size:11px;color:#0ea5e9;font-weight:700;white-space:nowrap}
-#snbot .tbox{background:#e0f2fe;border:1px solid #bae6fd;border-radius:5px;padding:2px 6px;font-size:13px;font-weight:800;min-width:26px;text-align:center}
-.cta{background:linear-gradient(135deg,var(--bl),#0284c7);color:#fff;font-weight:800;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none;white-space:nowrap;animation:pulsecta 2s infinite;box-shadow:0 4px 20px rgba(14,165,233,.4);display:block}
+.twr{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--bl);font-weight:700;white-space:nowrap}
+.tbox{background:#e0f2fe;border:1px solid #bae6fd;border-radius:5px;padding:2px 6px;font-size:13px;font-weight:800;min-width:26px;text-align:center}
+.cta-btn{flex:1;text-align:center;background:linear-gradient(135deg,var(--bl),#0284c7);color:#fff;font-weight:800;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none;animation:pulsecta 2s infinite;box-shadow:0 4px 20px rgba(14,165,233,.4);display:block}
 @keyframes pulsecta{0%,100%{box-shadow:0 4px 20px rgba(14,165,233,.4)}50%{box-shadow:0 6px 32px rgba(14,165,233,.7)}}
 @media(max-width:600px){body{padding-bottom:165px}#sntop .tx{display:none}}
-
-/* CHAT BUBBLE */
 #snb{position:fixed;bottom:130px;right:20px;z-index:2147483647;font-family:'Inter',system-ui,sans-serif}
 #sntog{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#020817,#0f172a);border:3px solid var(--bl);box-shadow:0 4px 20px rgba(14,165,233,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;position:relative}
-#snbadge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;animation:bdg 2s infinite}
-@keyframes bdg{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+#snbadge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
 #snwin{display:none;position:fixed;bottom:200px;right:20px;width:340px;max-height:500px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:10000;flex-direction:column;overflow:hidden}
 #snwh{background:linear-gradient(135deg,var(--dk),var(--dk2));padding:16px 18px;display:flex;align-items:center;gap:12px}
 #snwh .av{width:40px;height:40px;border-radius:50%;background:var(--bl);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
@@ -204,30 +182,24 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 </style>
 </head>
 <body>
-
-<!-- TOP BANNER -->
 <div id="sntop">
   <div class="lb"><span class="bj">FREE PREVIEW</span><span class="tx">This site was built for JMC Heating and Air — claim it before someone else does</span></div>
   <a href="https://square.link/u/SjwnWcQd" class="go" target="_blank">Get It Live →</a>
 </div>
-
-<!-- NAV -->
 <nav>
   <div class="nav-logo">JMC <span>Heating & Air</span></div>
   <a href="tel:+19014878083" class="nav-cta">📞 Call Now</a>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
     <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&auto=format&fit=crop&q=80')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&auto=format&fit=crop&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1631744500937-7f71a8c4a253?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-badge"><span class="pulse-dot"></span>SERVING OLIVE BRANCH, MS & DESOTO COUNTY</div>
+    <div class="hero-badge"><span class="pulse-dot"></span>SERVING OLIVE BRANCH & DESOTO COUNTY, MS</div>
     <h1>Olive Branch's <em>Most Reliable</em> HVAC Contractor</h1>
     <p class="hero-sub">Fast response, honest pricing, and expert work on every make and model. Jamal and the JMC team are just one call away.</p>
     <p class="hero-stars"><span class="s">★★★★★</span>&nbsp; 5.0 · Verified Google Reviews</p>
@@ -238,8 +210,6 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
   </div>
   <div class="hscroll"><div class="hsd"></div></div>
 </section>
-
-<!-- TRUST BAR -->
 <div class="trust-bar"><div class="trust-inner">
   <span class="trust-item">✅ Licensed &amp; Insured</span>
   <span class="trust-item">⚡ Same-Day Service</span>
@@ -247,56 +217,48 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
   <span class="trust-item">🔧 All Makes &amp; Models</span>
   <span class="trust-item">⭐ 5-Star Rated</span>
 </div></div>
-
-<!-- SERVICES -->
 <section class="services-section" id="services">
   <div class="container">
     <div class="section-label">WHAT WE DO</div>
-    <h2 class="section-title">Expert HVAC Services in <span>Olive Branch, MS</span></h2>
+    <h2 class="section-title">Expert HVAC Services in <span>DeSoto County, MS</span></h2>
     <p class="section-sub">From emergency repairs to full system replacements — fast, clean, and always done right the first time.</p>
     <div class="services-grid">
       <div class="service-card"><span class="service-icon">❄️</span><h3>AC Installation &amp; Replacement</h3><p>Expert installation of all major brands — Carrier, Trane, Lennox, Goodman. Right system sized for your home.</p></div>
-      <div class="service-card"><span class="service-icon">🔧</span><h3>HVAC Repair</h3><p>Fast diagnosis and reliable repairs. Same-day service available — we don't leave you sweating.</p></div>
-      <div class="service-card"><span class="service-icon">🔥</span><h3>Furnace &amp; Heating Service</h3><p>Gas furnace repair and installation. We fixed furnaces mid-winter when other contractors couldn't show up.</p></div>
-      <div class="service-card"><span class="service-icon">🔥</span><h3>Gas Fireplace Repair</h3><p>Specialty service most HVAC companies skip. Jamal has the training and parts to get it done right.</p></div>
-      <div class="service-card"><span class="service-icon">📅</span><h3>Preventive Maintenance</h3><p>Seasonal tune-ups to keep your system running efficiently and avoid costly mid-season breakdowns.</p></div>
-      <div class="service-card"><span class="service-icon">🚨</span><h3>Emergency Service</h3><p>HVAC failures don't follow business hours. We're available Mon–Fri 8am–8pm and Sat 8am–12pm.</p></div>
+      <div class="service-card"><span class="service-icon">🔧</span><h3>AC Repair</h3><p>Fast diagnosis and reliable repairs. Same-day service available — we don't leave you sweating in Mississippi heat.</p></div>
+      <div class="service-card"><span class="service-icon">🔥</span><h3>Furnace &amp; Heating Service</h3><p>Gas furnace repair, service, and installation. We've fixed furnaces mid-winter when other contractors couldn't show up.</p></div>
+      <div class="service-card"><span class="service-icon">🔥</span><h3>Gas Fireplace Repair</h3><p>Specialty work most HVAC companies skip. Jamal has the training and parts to get it done right — fast.</p></div>
+      <div class="service-card"><span class="service-icon">📅</span><h3>Preventive Maintenance</h3><p>Seasonal tune-ups to keep your system running efficiently and prevent costly mid-season breakdowns.</p></div>
+      <div class="service-card"><span class="service-icon">🌡️</span><h3>Heat Pump Service</h3><p>Installation, repair, and maintenance of heat pump systems for year-round comfort and energy savings.</p></div>
     </div>
   </div>
 </section>
-
-<!-- STATS -->
 <section class="stats-section">
   <div class="stats-grid">
-    <div><div class="stat-number"><span class="count" data-target="100">0</span>%</div><div class="stat-label">5-Star Reviews</div></div>
-    <div><div class="stat-number"><span class="count" data-target="5">0</span> Days</div><div class="stat-label">Mon–Fri Extended Hours</div></div>
-    <div><div class="stat-number">$<span class="count" data-target="0">0</span></div><div class="stat-label">Estimate Cost</div></div>
-    <div><div class="stat-number"><span class="count" data-target="8">0</span>am</div><div class="stat-label">First Call of the Day</div></div>
+    <div><div class="stat-number">100%</div><div class="stat-label">5-Star Reviews</div></div>
+    <div><div class="stat-number">6</div><div class="stat-label">Days a Week Available</div></div>
+    <div><div class="stat-number">Free</div><div class="stat-label">Estimate Cost</div></div>
+    <div><div class="stat-number">Same</div><div class="stat-label">Day Service Available</div></div>
   </div>
 </section>
-
-<!-- WHY -->
 <section class="why-section">
   <div class="why-grid">
     <div class="why-img-wrap">
-      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80" alt="HVAC tech"/>
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80" alt="HVAC technician at work"/>
       <div class="why-badge"><div class="wn"><span>5</span>★</div><div class="wl">Perfect Rating<br>on Google</div></div>
     </div>
     <div>
       <div class="section-label">WHY CHOOSE JMC</div>
-      <h2 class="section-title">Olive Branch's Trusted <span>HVAC Expert</span></h2>
+      <h2 class="section-title">DeSoto County's Trusted <span>HVAC Expert</span></h2>
       <p class="section-sub">Jamal built JMC on one principle: show up, fix it right, and be honest about the price. Every single time.</p>
       <ul class="why-list">
-        <li class="why-item"><div class="why-icon">⚡</div><div><h4>Same-Day Response</h4><p>When your AC dies in Mississippi heat, you need someone there that day — not next week.</p></div></li>
-        <li class="why-item"><div class="why-icon">💰</div><div><h4>Transparent Pricing</h4><p>Upfront estimates before work begins. No surprises on the invoice — ever.</p></div></li>
+        <li class="why-item"><div class="why-icon">⚡</div><div><h4>Same-Day Response</h4><p>When your AC dies in DeSoto County heat, you need someone there that day — not next week.</p></div></li>
+        <li class="why-item"><div class="why-icon">💰</div><div><h4>Transparent Pricing</h4><p>Upfront estimates before any work begins. No surprises on the invoice — ever.</p></div></li>
         <li class="why-item"><div class="why-icon">🏆</div><div><h4>All Makes &amp; Models</h4><p>Carrier, Trane, Lennox, Goodman — we service everything with expert-level knowledge.</p></div></li>
-        <li class="why-item"><div class="why-icon">🛡️</div><div><h4>Licensed &amp; Insured</h4><p>Your home is protected. Fully licensed and carrying complete liability coverage.</p></div></li>
+        <li class="why-item"><div class="why-icon">🛡️</div><div><h4>Licensed &amp; Insured</h4><p>Your home is protected. Fully licensed and carrying complete liability coverage on every job.</p></div></li>
       </ul>
     </div>
   </div>
 </section>
-
-<!-- GALLERY -->
 <section class="gallery-section" id="gallery">
   <div class="container">
     <div style="text-align:center">
@@ -306,10 +268,10 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
     </div>
     <div class="carousel-outer">
       <div class="carousel-inner" id="ci">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80" alt="HVAC work 1"/>
-        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&auto=format&fit=crop&q=80" alt="HVAC work 2"/>
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&auto=format&fit=crop&q=80" alt="HVAC work 3"/>
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80" alt="HVAC work 4"/>
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80" alt="HVAC installation"/>
+        <img src="https://images.unsplash.com/photo-1631744500937-7f71a8c4a253?w=1200&auto=format&fit=crop&q=80" alt="HVAC repair"/>
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&auto=format&fit=crop&q=80" alt="AC unit service"/>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80" alt="Heating system"/>
       </div>
       <button class="cbtn cprev" id="cprev">&#8249;</button>
       <button class="cbtn cnext" id="cnext">&#8250;</button>
@@ -317,105 +279,87 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
     <div class="cdots" id="cdots"></div>
   </div>
 </section>
-
-<!-- REVIEWS -->
 <section class="reviews-section" id="reviews">
   <div class="container">
     <div class="section-label">WHAT CUSTOMERS SAY</div>
     <h2 class="section-title">Real Reviews from <span>Real Customers</span></h2>
-    <p class="section-sub">Don't take our word for it — here's what Olive Branch homeowners are saying about JMC.</p>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p>
-        <div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Verified Google Review</div></div></div>
+    <p class="section-sub">Olive Branch and DeSoto County homeowners trust JMC — here's what they're saying.</p>
+    <div class="rev-carousel-wrap">
+      <div class="rev-track" id="revTrack">
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC are punctual, friendly, knowledgeable, and honest. They fixed my gas furnace when it quit in the middle of winter, and my A/C compressor when it went out in the summer. They're definitely the go-to.</p><div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Mike D.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Mr. Jamal responded quicker than I expected. He's very courteous and knowledgeable. He arrived on time and repaired my gas fireplace in a matter of minutes.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Susan M.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Always professional and on time with services. My first call for anything HVAC-related. Jamal takes his work seriously and it shows every single time.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. Great communication, arrived on time and got right to it. Before I knew it the job was done.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Raymond K.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again without hesitation.</p><div class="reviewer"><div class="reviewer-av">B</div><div><div class="reviewer-name">Brenda H.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Had my unit serviced before summer hit and it made a huge difference. Jamal was thorough, honest, and didn't try to upsell me on things I didn't need. That means a lot.</p><div class="reviewer"><div class="reviewer-av">D</div><div><div class="reviewer-name">Darrell W.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">My AC went out on a Friday afternoon. Called JMC and Jamal was there within two hours. Fixed it same day. Can't ask for better service than that.</p><div class="reviewer"><div class="reviewer-av">C</div><div><div class="reviewer-name">Cassandra P.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Very impressed with JMC. Jamal diagnosed the problem fast, gave me a fair price upfront, and had everything fixed before noon. Professional from start to finish.</p><div class="reviewer"><div class="reviewer-av">J</div><div><div class="reviewer-name">James F.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">I've used JMC twice now and both times were great. Shows up when he says he will, prices are fair, and the work is done right. I recommend him to all my neighbors.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Angela M.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Needed my furnace checked before winter. Jamal came out the next morning, cleaned everything up, and found a small issue before it became a big one. Saved me money.</p><div class="reviewer"><div class="reviewer-av">K</div><div><div class="reviewer-name">Kevin R.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Honest, fast, and reliable. Jamal doesn't cut corners. He replaced my capacitor and had the unit blowing cold again in under an hour. Highly recommend JMC.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tonya G.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Best HVAC experience I've had in DeSoto County. Showed up on time, communicated clearly, and left the area cleaner than when he arrived. Will definitely use again.</p><div class="reviewer"><div class="reviewer-av">N</div><div><div class="reviewer-name">Nathan B.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Called JMC on a Saturday morning when my heat pump stopped working. Jamal was at my house by noon and had it running within the hour. Exceptional service.</p><div class="reviewer"><div class="reviewer-av">P</div><div><div class="reviewer-name">Patricia L.</div><div class="reviewer-src">✓ HomeAdvisor Review</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal is the real deal. Knowledgeable, fair, and actually cares about doing the job right. My go-to for all things heating and air in Olive Branch.</p><div class="reviewer"><div class="reviewer-av">G</div><div><div class="reviewer-name">Greg S.</div><div class="reviewer-src">✓ Yelp Review</div></div></div></div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="rcq">JMC are punctual, friendly, knowledgeable, and honest. They fixed my gas furnace when it quit in the middle of winter, and my A/C compressor when it went out in the summer. They're definitely the go-to.</p>
-        <div class="reviewer"><div class="reviewer-av">M</div><div><div class="reviewer-name">Mike D.</div><div class="reviewer-src">✓ Verified Google Review</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="rcq">Jamal responded quicker than I expected. He's very courteous and knowledgeable. He arrived on time and repaired my gas fireplace in a matter of minutes.</p>
-        <div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Susan M.</div><div class="reviewer-src">✓ Verified Google Review</div></div></div>
-      </div>
+    </div>
+    <div class="rev-nav">
+      <button class="rev-btn" id="revPrev">&#8249;</button>
+      <div class="rev-dots" id="revDots"></div>
+      <button class="rev-btn" id="revNext">&#8250;</button>
     </div>
   </div>
 </section>
-
-<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-grid">
     <div class="contact-form">
       <div class="section-label">GET IN TOUCH</div>
       <h2 class="section-title">Request a <span>Free Estimate</span></h2>
       <p style="color:#64748b;font-size:.9rem;margin-bottom:24px;line-height:1.7">Fill out the form and we'll get back to you fast — usually within the hour.</p>
-      <select><option>Service Needed...</option><option>AC Installation / Replacement</option><option>AC Repair</option><option>Furnace / Heating Service</option><option>Gas Fireplace Repair</option><option>Preventive Maintenance</option><option>Emergency Service</option><option>Other</option></select>
+      <select><option>Service Needed...</option><option>AC Installation / Replacement</option><option>AC Repair</option><option>Furnace / Heating Service</option><option>Gas Fireplace Repair</option><option>Heat Pump Service</option><option>Preventive Maintenance</option><option>Emergency Service</option><option>Other</option></select>
       <textarea placeholder="Describe your HVAC issue..."></textarea>
       <button class="submit-btn" onclick="window.location.href='https://square.link/u/SjwnWcQd'">Send My Request →</button>
     </div>
     <div class="contact-info">
       <h3>Get in Touch</h3>
       <div class="contact-detail"><div class="contact-icon">📞</div><div><h4>Phone</h4><p>(901) 487-8083</p></div></div>
-      <div class="contact-detail"><div class="contact-icon">📍</div><div><h4>Address</h4><p>9835 E Sandidge Rd<br>Olive Branch, MS 38654</p></div></div>
+      <div class="contact-detail"><div class="contact-icon">📍</div><div><h4>Address</h4><p>9835 E Sandidge Rd<br>Olive Branch, MS 38654<br>DeSoto County</p></div></div>
       <div class="contact-detail"><div class="contact-icon">⏰</div><div><h4>Business Hours</h4><p>Mon–Fri: 8am–8pm<br>Sat: 8am–12pm · Sun: Closed</p></div></div>
+      <div class="contact-detail"><div class="contact-icon">💳</div><div><h4>Payment</h4><p>Visa, Mastercard, Discover, Amex</p></div></div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">JMC <span>Heating & Air</span></div>
-    <p class="footer-tagline">HVAC Installation, Repair &amp; Maintenance · Olive Branch, MS 38654</p>
-    <p class="footer-tagline">📞 (901) 487-8083 · 9835 E Sandidge Rd</p>
+    <p class="footer-tagline">HVAC Installation, Repair &amp; Maintenance · Olive Branch, MS · DeSoto County</p>
+    <p class="footer-tagline">📞 (901) 487-8083 · 9835 E Sandidge Rd, Olive Branch, MS 38654</p>
     <div class="footer-links"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a href="tel:+19014878083">Call Us</a></div>
-    <div class="footer-bottom"><span>© 2026 JMC Heating and Air Conditioning. All rights reserved.</span></div>
+    <div class="footer-bottom">© 2026 JMC Heating and Air Conditioning. All rights reserved.</div>
   </div>
 </footer>
-
-<!-- BOTTOM BAR -->
 <div id="snbot">
   <div id="snbot-row1">
-    <div class="twr">🔥 Offer expires: <span class="tbox" id="th">23</span>:<span class="tbox" id="tm">59</span>:<span class="tbox" id="ts">59</span></div>
-    <div id="snbot-price">
-      <div class="was">$1,200 value</div>
-      <div class="now">$750</div>
-      <div class="sub">one-time setup · then $100/mo hosting</div>
-    </div>
+    <div class="twr">🔥 Offer expires: <span class="tbox" id="th">47</span>:<span class="tbox" id="tm">59</span>:<span class="tbox" id="ts">59</span></div>
+    <div id="snbot-price"><div class="was">$1,200 value</div><div class="now">$750</div><div class="sub">one-time setup</div><div class="rec">then $100/mo hosting</div></div>
   </div>
-  <div id="snbot-row2">
-    <a href="https://square.link/u/SjwnWcQd" class="cta">Get It Live Now →</a>
-  </div>
+  <div id="snbot-row2"><a href="https://square.link/u/SjwnWcQd" class="cta-btn" target="_blank">Get It Live Now →</a></div>
 </div>
-
-<!-- CHAT BUBBLE -->
 <div id="snb">
-  <div id="sntog" onclick="snOpen()">
-    💬<div id="snbadge">1</div>
-  </div>
+  <div id="sntog" onclick="snOpen()">💬<div id="snbadge">1</div></div>
 </div>
 <div id="snwin">
-  <div id="snwh">
-    <div class="av">🤖</div>
-    <div class="inf"><div class="nm">Alex · SiteSniper</div><div class="st">Online now</div></div>
-    <button onclick="snClose()">✕</button>
-  </div>
+  <div id="snwh"><div class="av">🤖</div><div class="inf"><div class="nm">Alex · SiteSniper</div><div class="st">Online now</div></div><button onclick="snClose()">✕</button></div>
   <div id="snmsgs"></div>
   <div id="snq">
     <button onclick="snAsk('How much does it cost?')">💰 Pricing</button>
     <button onclick="snAsk('How fast can it go live?')">⚡ Timeline</button>
     <button onclick="snAsk('What is included?')">📋 Included</button>
   </div>
-  <div id="snir">
-    <input id="sninp" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')snSend()"/>
-    <button id="snsend" onclick="snSend()">➤</button>
-  </div>
+  <div id="snir"><input id="sninp" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')snSend()"/><button id="snsend" onclick="snSend()">➤</button></div>
 </div>
-
 <script>
-// CAROUSEL
+// PHOTO CAROUSEL
 (function(){
   var ci=document.getElementById('ci'),dotsEl=document.getElementById('cdots'),prev=document.getElementById('cprev'),next=document.getElementById('cnext');
   if(!ci)return;
@@ -428,16 +372,43 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
   setInterval(function(){go(cur+1)},5000);
 })();
 
-// COUNT UP
+// REVIEWS CAROUSEL
 (function(){
-  var els=document.querySelectorAll('.count');
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var el=e.target,target=parseInt(el.dataset.target),v=0,step=Math.max(target/60,1);var t=setInterval(function(){v=Math.min(v+step,target);el.textContent=Math.floor(v);if(v>=target)clearInterval(t)},16);io.unobserve(el)}})},{threshold:0.5});
-  els.forEach(function(el){io.observe(el)});
+  var track=document.getElementById('revTrack');
+  var dotsEl=document.getElementById('revDots');
+  var prevBtn=document.getElementById('revPrev');
+  var nextBtn=document.getElementById('revNext');
+  if(!track)return;
+  var cards=track.querySelectorAll('.review-card');
+  var total=cards.length;
+  var cur=0;
+  function getCols(){
+    var w=window.innerWidth;
+    if(w<=580)return 1;
+    if(w<=900)return 2;
+    return 3;
+  }
+  var cols=getCols();
+  var pages=Math.ceil(total/cols);
+  function buildDots(){
+    dotsEl.innerHTML='';
+    for(var i=0;i<pages;i++){(function(idx){var d=document.createElement('button');d.className='rev-dot'+(idx===0?' on':'');d.onclick=function(){goPage(idx)};dotsEl.appendChild(d)})(i)}
+  }
+  function goPage(n){
+    cur=(n+pages)%pages;
+    var cardW=cards[0].offsetWidth+20;
+    track.style.transform='translateX(-'+(cur*cols*cardW)+'px)';
+    dotsEl.querySelectorAll('.rev-dot').forEach(function(d,i){d.className='rev-dot'+(i===cur?' on':'')});
+  }
+  buildDots();
+  if(prevBtn)prevBtn.onclick=function(){goPage(cur-1)};
+  if(nextBtn)nextBtn.onclick=function(){goPage(cur+1)};
+  window.addEventListener('resize',function(){cols=getCols();pages=Math.ceil(total/cols);cur=0;buildDots();track.style.transform='translateX(0)'});
 })();
 
-// COUNTDOWN TIMER
+// COUNTDOWN
 (function(){
-  var k='jmcte48',e=localStorage.getItem(k);
+  var k='jmcte48b',e=localStorage.getItem(k);
   if(!e){e=Date.now()+48*3600000;localStorage.setItem(k,e)}
   e=parseInt(e);
   function tick(){
@@ -456,20 +427,19 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 var SNOP=false;
 var FAQS=[
   {q:['how much','cost','price','pricing','fee','750','100'],a:"It's a one-time <strong>$750 setup fee</strong> — covers your fully built site, custom domain, and 30 days hosting free. After that, <strong>$100/month</strong> for hosting. No contracts, cancel anytime."},
-  {q:['how long','when','timeline','fast','ready','24','48','live'],a:"Live within <strong>24-48 hours</strong> after your setup form. Your site is already built — we just need a few details from you."},
+  {q:['how long','when','timeline','fast','ready','live'],a:"Live within <strong>24-48 hours</strong> after your setup form. Your site is already built — just need a few details."},
   {q:['domain','url','own','ownership'],a:"You own the domain 100%. Registered in your name so it's yours forever."},
   {q:['include','included','what do i get','features'],a:"Custom domain, mobile-friendly design, your Google reviews, contact form, and click-to-call. All built before you pay."},
-  {q:['hosting','monthly','recurring','cancel','contract'],a:"<strong>$100/month</strong> for hosting starting 30 days after setup. First month free. No contracts — cancel anytime."},
-  {q:['book','call','talk','speak','human','noel','schedule'],a:"Book a call with Noel: <a href='https://calendly.com/noelgileswebdev/30min' target='_blank' style='color:#0ea5e9;font-weight:700'>Schedule Now →</a>"},
-  {q:['refund','guarantee'],a:"Not satisfied within 7 days? We'll make it right or refund you — no questions."},
-  {q:['after payment','next steps','what happens'],a:"After payment you'll get an onboarding email with a short setup form. Fill it out and your site goes live within 24-48 hours."}
+  {q:['hosting','monthly','recurring','cancel','contract'],a:"<strong>$100/month</strong> starting 30 days after setup. First month free. No contracts — cancel anytime."},
+  {q:['book','call','talk','human','noel','schedule'],a:"Book a call with Noel: <a href='https://calendly.com/noelgileswebdev/30min' target='_blank' style='color:#0ea5e9;font-weight:700'>Schedule Now →</a>"},
+  {q:['refund','guarantee'],a:"Not satisfied within 7 days? We'll make it right or refund you — no questions asked."}
 ];
-function snOpen(){var w=document.getElementById('snwin');w.style.display='flex';document.getElementById('snbadge').style.display='none';if(!SNOP){SNOP=true;setTimeout(function(){snBot("Hey! I'm Alex 👋 I put this site together for JMC Heating and Air. Ask me anything about pricing, what's included, or how fast it can go live!")},400)}setTimeout(function(){var i=document.getElementById('sninp');if(i)i.focus()},500)}
+function snOpen(){var w=document.getElementById('snwin');w.style.display='flex';document.getElementById('snbadge').style.display='none';if(!SNOP){SNOP=true;setTimeout(function(){snBot("Hey! I'm Alex 👋 I put this site together for JMC Heating and Air. Ask me anything about pricing, what's included, or how fast it goes live!")},400)}setTimeout(function(){var i=document.getElementById('sninp');if(i)i.focus()},500)}
 function snClose(){document.getElementById('snwin').style.display='none'}
 function snBot(html){var msgs=document.getElementById('snmsgs');var t=document.createElement('div');t.className='snm bot';t.innerHTML='<div class="av">🤖</div><div class="bbl"><div class="tdots"><span></span><span></span><span></span></div></div>';msgs.appendChild(t);msgs.scrollTop=msgs.scrollHeight;setTimeout(function(){msgs.removeChild(t);var m=document.createElement('div');m.className='snm bot';m.innerHTML='<div class="av">🤖</div><div class="bbl">'+html+'</div>';msgs.appendChild(m);msgs.scrollTop=msgs.scrollHeight},900)}
 function snUser(txt){var msgs=document.getElementById('snmsgs');var m=document.createElement('div');m.className='snm user';m.innerHTML='<div class="bbl">'+txt.replace(/</g,'&lt;')+'</div>';msgs.appendChild(m);msgs.scrollTop=msgs.scrollHeight}
 function snAsk(q){document.getElementById('sninp').value=q;snSend()}
-function snSend(){var inp=document.getElementById('sninp');var t=inp.value.trim();if(!t)return;inp.value='';snUser(t);var lower=t.toLowerCase(),ans=null;for(var i=0;i<FAQS.length;i++){for(var j=0;j<FAQS[i].q.length;j++){if(lower.indexOf(FAQS[i].q[j])!==-1){ans=FAQS[i].a;break}}if(ans)break}snBot(ans||"Great question! Best to get the answer straight from Noel: <a href='https://calendly.com/noelgileswebdev/30min' target='_blank' style='color:#0ea5e9;font-weight:700'>Book a Call →</a>")}
+function snSend(){var inp=document.getElementById('sninp');var t=inp.value.trim();if(!t)return;inp.value='';snUser(t);var lower=t.toLowerCase(),ans=null;for(var i=0;i<FAQS.length;i++){for(var j=0;j<FAQS[i].q.length;j++){if(lower.indexOf(FAQS[i].q[j])!==-1){ans=FAQS[i].a;break}}if(ans)break}snBot(ans||"Good question! Best to get that straight from Noel: <a href='https://calendly.com/noelgileswebdev/30min' target='_blank' style='color:#0ea5e9;font-weight:700'>Book a Call →</a>")}
 </script>
 </body>
 </html>
