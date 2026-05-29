@@ -85,14 +85,14 @@ h2.section-title span{color:var(--bl)}
 @media(max-width:768px){.why-grid{grid-template-columns:1fr;gap:40px}.why-img-wrap{display:none}}
 .gallery-section{background:var(--lt);overflow:hidden}
 .carousel-outer{position:relative;max-width:1080px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.1)}
-.carousel-inner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.carousel-inner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}.carousel-inner::-webkit-scrollbar{display:none}
 .carousel-inner::-webkit-scrollbar{display:none}
-.carousel-inner img{flex:0 0 100%;width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:start;display:block}
+.carousel-inner img{flex:0 0 100%;width:100%;height:320px;object-fit:cover;scroll-snap-align:start;pointer-events:none}
 
 
-.cdots{display:flex;justify-content:center;gap:8px;margin-top:18px}
-.cdot{width:9px;height:9px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:all .3s}
-.cdot.on{background:var(--bl);width:24px;border-radius:5px}
+
+
+
 /* REVIEWS CAROUSEL */
 .reviews-section{background:#fff}
 
@@ -324,12 +324,10 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
         <img src="https://images.pexels.com/photos/6471913/pexels-photo-6471913.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC technician servicing AC unit"/>
         <img src="https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Outdoor HVAC condensing units"/>
         <img src="https://images.pexels.com/photos/6471914/pexels-photo-6471914.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC installation"/>
-        <img src="https://images.pexels.com/photos/5691680/pexels-photo-5691680.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&fit=crop" alt="HVAC outdoor unit installation"/>
+        <img src="https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC outdoor unit installation"/>
       </div>
-      <button class="cbtn cprev" id="cprev">&#8249;</button>
-      <button class="cbtn cnext" id="cnext">&#8250;</button>
     </div>
-    <div class="cdots" id="cdots"></div>
+    
   </div>
 </section>
 <section class="reviews-section" id="reviews">
@@ -353,7 +351,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div>
             </div>
           </div>
 
@@ -362,7 +360,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"Always professional and on time with services. My first call for anything HVAC-related in Olive Branch."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#0ea5e9">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div>
             </div>
           </div>
 
@@ -371,7 +369,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#7c3aed">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div>
             </div>
           </div>
 
@@ -380,7 +378,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem quickly and with ease."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#f59e0b">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div>
             </div>
           </div>
 
@@ -389,7 +387,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"They were very professional and actually came to the job 30 minutes before the original appointment time."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#10b981">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div>
             </div>
           </div>
 
@@ -398,7 +396,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
               <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
               <div class="rev-stars">★★★★★</div>
               <p class="rev-text">"Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing. We would hire him again."</p>
-              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#ec4899">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div>
+              <div class="reviewer-row"><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div>
             </div>
           </div>
 
