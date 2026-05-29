@@ -89,15 +89,15 @@ h2.section-title span{color:var(--bl)}
 .carousel-inner::-webkit-scrollbar{display:none}
 .carousel-inner img{flex:0 0 100%;width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:start;display:block}
 .cbtn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.92);border:none;border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.18);z-index:10;display:flex;align-items:center;justify-content:center}
-.cprev{left:14px}.cnext{right:14px}
+.cprev{left:14px}.cnxt{right:14px}
 .cdots{display:flex;justify-content:center;gap:8px;margin-top:18px}
 .cdot{width:9px;height:9px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:all .3s}
 .cdot.on{background:var(--bl);width:24px;border-radius:5px}
 /* REVIEWS CAROUSEL */
 .reviews-section{background:#fff}
-.rev-cw{position:relative;overflow:hidden;border-radius:16px}
+.rev-cw{position:relative;border-radius:16px}
 .rev-ct{display:flex;gap:0;transition:transform .5s cubic-bezier(.4,0,.2,1)}
-.rev-slide{flex:0 0 100%;padding:0}
+.rev-slide{flex:0 0 100%;padding:0;box-sizing:border-box}
 @media(min-width:768px){.rev-slide{flex:0 0 33.333%}}
 .rev-track{display:none}
 .review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;width:100%}
@@ -310,7 +310,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
         <img src="https://images.pexels.com/photos/6471913/pexels-photo-6471913.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC technician servicing AC unit"/>
         <img src="https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Outdoor HVAC condensing units"/>
         <img src="https://images.pexels.com/photos/6471914/pexels-photo-6471914.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="HVAC installation"/>
-        <img src="https://images.pexels.com/photos/8293651/pexels-photo-8293651.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=crop" alt="Furnace repair and service"/>
+        <img src="https://images.pexels.com/photos/5691680/pexels-photo-5691680.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&fit=crop" alt="HVAC outdoor unit installation"/>
       </div>
       <button class="cbtn cprev" id="cprev">&#8249;</button>
       <button class="cbtn cnext" id="cnext">&#8250;</button>
@@ -323,20 +323,21 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
     <div class="section-label">WHAT CUSTOMERS SAY</div>
     <h2 class="section-title">Real Reviews from <span>Real Customers</span></h2>
     <p class="section-sub">90+ reviews on HomeAdvisor &amp; Yelp. Here's what Olive Branch homeowners say about JMC.</p>
-    <div style="position:relative;max-width:1080px;margin:0 auto">
+    <div style="max-width:1080px;margin:0 auto">
       <div class="rev-cw" id="revWrap">
-        <div class="rev-ct" id="revTrack2">
+        <button class="cbtn cprev" id="revPrev2" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:20">&#8249;</button>
+        <button class="cbtn cnxt" id="revNext2" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:20">&#8250;</button>
+        <div style="overflow:hidden;border-radius:12px"><div class="rev-ct" id="revTrack2">
           <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div></div>
           <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Always professional and on time with services. My first call for anything HVAC-related in Olive Branch.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
           <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
           <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem and repaired my AC unit quickly and with ease. He was detail oriented. I would utilize his services again.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div></div>
           <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">They were very professional and actually came to the job 30 minutes before the original appointment time.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div></div>
           <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again and refer him to friends and neighbors.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div></div>
-        </div>
+        </div></div>
       </div>
       <div class="cnav" id="revNav"></div>
-      <button class="cbtn cprev" id="revPrev2">&#8249;</button>
-      <button class="cbtn cnxt" id="revNext2">&#8250;</button>
+
     </div>
   </div>
 </section>
@@ -430,7 +431,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
   }
   function goPage(n){
     cur=Math.max(0,Math.min(n,pages-1));
-    var slideW=track.parentElement.offsetWidth/cols;
+    var slideW=document.getElementById("revWrap").offsetWidth/cols;
     track.style.transform='translateX(-'+(cur*cols*slideW)+'px)';
     nav.querySelectorAll('.cd').forEach(function(d,i){d.classList.toggle('on',i===cur)});
     if(prevBtn)prevBtn.style.opacity=cur===0?'0.3':'1';
@@ -444,7 +445,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
     var dx=e.changedTouches[0].clientX-sx;
     if(Math.abs(dx)>40)goPage(cur+(dx<0?1:-1));
   },false);
-  window.addEventListener('resize',function(){cols=getCols();pages=Math.ceil(total/cols);cur=0;buildDots();track.style.transform='translateX(0)';});
+  window.addEventListener('resize',function(){cols=getCols();pages=Math.ceil(total/cols);goPage(0);});
   buildDots();
   goPage(0);
 })();
