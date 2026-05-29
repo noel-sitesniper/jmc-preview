@@ -66,9 +66,9 @@ h2.section-title span{color:var(--bl)}
 .service-card p{color:#64748b;font-size:.87rem;line-height:1.7}
 /* STATS — all light blue */
 .stats-section{background:linear-gradient(135deg,var(--dk),var(--dk2));padding:48px 12px}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto;text-align:center}
-.stat-number{font-size:clamp(1.4rem,4vw,3.2rem);font-weight:900;color:var(--bl);line-height:1;margin-bottom:4px}
-.stat-label{color:var(--ac);font-size:clamp(.55rem,.9vw+.4rem,.8rem);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:900px;margin:0 auto;text-align:center;padding:0 8px}
+.stat-number{font-size:clamp(1.1rem,4vw,3.2rem);font-weight:900;color:var(--bl);line-height:1;margin-bottom:4px}
+.stat-label{color:var(--ac);font-size:clamp(.5rem,1.8vw,.8rem);font-weight:600;text-transform:uppercase;letter-spacing:.3px;line-height:1.2}
 .why-section{background:#fff}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1080px;margin:0 auto}
 .why-img-wrap{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3}@media(max-width:640px){.why-grid{grid-template-columns:1fr;gap:24px}.why-section{padding:40px 20px 20px}.why-img-wrap{aspect-ratio:16/9}}
@@ -242,10 +242,10 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 </section>
 <section class="stats-section">
   <div class="stats-grid">
-    <div><div class="stat-number">100%</div><div class="stat-label">5-Star Reviews on Google</div></div>
+    <div><div class="stat-number">100%</div><div class="stat-label">5-Star Google</div></div>
     <div><div class="stat-number">6</div><div class="stat-label">Days a Week Available</div></div>
     <div><div class="stat-number">Free</div><div class="stat-label">Estimate Cost</div></div>
-    <div><div class="stat-number">Same</div><div class="stat-label">Day Service Available</div></div>
+    <div><div class="stat-number">Same</div><div class="stat-label">Day Service</div></div>
   </div>
 </section>
 <section class="why-section">
@@ -275,10 +275,10 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
       <p style="color:#374151;font-size:.98rem;line-height:1.85;margin-bottom:20px">Jamal Jawhar has been serving the Mid-South community since <strong>1993</strong> — over 30 years keeping families comfortable through Mississippi's brutal summers and cold winter nights. What started as a one-man operation built on word-of-mouth has grown into one of DeSoto County's most trusted HVAC names, with a loyal customer base that keeps coming back and referring friends.</p>
       <p style="color:#374151;font-size:.98rem;line-height:1.85;margin-bottom:20px">Jamal's motto is simple: <em>"One Call Does It All."</em> Whether it's a gas fireplace repair, a full AC system replacement, or a routine tune-up before summer hits, he handles it personally — with the kind of care and communication that big HVAC companies just can't match.</p>
       <p style="color:#374151;font-size:.98rem;line-height:1.85;margin-bottom:32px">He's an <strong>Angi Super Service Award winner (2025)</strong>, holds a <strong>4.6-star rating across 90+ HomeAdvisor reviews</strong>, and offers a <strong>100% satisfaction guarantee</strong> with a warranty on all products installed.</p>
-      <div style="display:flex;gap:24px;flex-wrap:wrap">
-        <div style="text-align:center"><div style="font-size:2rem;font-weight:900;color:var(--bl)">30+</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Years Experience</div></div>
-        <div style="text-align:center"><div style="font-size:2rem;font-weight:900;color:var(--bl)">90+</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Verified Reviews</div></div>
-        <div style="text-align:center"><div style="font-size:2rem;font-weight:900;color:var(--bl)">100%</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Satisfaction Guarantee</div></div>
+      <div style="display:flex;gap:0;flex-wrap:nowrap;justify-content:space-around;width:100%">
+        <div style="text-align:center;flex:1;min-width:0"><div style="font-size:clamp(1.4rem,5vw,2rem);font-weight:900;color:var(--bl)">30+</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Years Experience</div></div>
+        <div style="text-align:center;flex:1;min-width:0"><div style="font-size:clamp(1.4rem,5vw,2rem);font-weight:900;color:var(--bl)">90+</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Verified Reviews</div></div>
+        <div style="text-align:center;flex:1;min-width:0"><div style="font-size:clamp(1.4rem,5vw,2rem);font-weight:900;color:var(--bl)">100%</div><div style="font-size:.78rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Satisfaction Guarantee</div></div>
       </div>
     </div>
     <div style="background:var(--lt);border-radius:22px;padding:36px;border:1px solid #bae6fd">
