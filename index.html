@@ -184,7 +184,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 @media(max-width:600px){#snb{bottom:175px!important;right:16px!important}}
 
 /* ── REVIEW CAROUSEL ── */
-.rcar-outer{position:relative;max-width:1100px;margin:0 auto;padding:0 52px}
+.rcar-outer{position:relative;max-width:1100px;margin:0 auto;padding:0 48px}@media(max-width:600px){.rcar-outer{padding:0 36px}}
 .rcar-clip{overflow:hidden;border-radius:16px;width:100%}
 .rcar-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
 .rcar-slide{flex:0 0 100%;box-sizing:border-box;padding:0 8px}
@@ -546,7 +546,7 @@ function snSend(){var inp=document.getElementById('sninp');var t=inp.value.trim(
     var p = pages();
     cur = Math.max(0, Math.min(n, p-1));
     var slideW = clip.offsetWidth / cols();
-    track.style.transform = 'translateX(' + (-cur * cols() * slideW) + 'px)';
+    track.style.transform = 'translateX(' + (-cur * clip.offsetWidth) + 'px)';
     // Update each slide width to match current cols
     for(var i=0;i<slides.length;i++){
       slides[i].style.flex = '0 0 ' + slideW + 'px';
