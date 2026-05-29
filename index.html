@@ -65,10 +65,10 @@ h2.section-title span{color:var(--bl)}
 .service-card h3{font-size:1.02rem;font-weight:800;color:var(--dk);margin-bottom:10px}
 .service-card p{color:#64748b;font-size:.87rem;line-height:1.7}
 /* STATS — all light blue */
-.stats-section{background:linear-gradient(135deg,var(--dk),var(--dk2));padding:48px 12px}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:900px;margin:0 auto;text-align:center;padding:0 8px}
-.stat-number{font-size:clamp(1.1rem,4vw,3.2rem);font-weight:900;color:var(--bl);line-height:1;margin-bottom:4px}
-.stat-label{color:var(--ac);font-size:clamp(.5rem,1.8vw,.8rem);font-weight:600;text-transform:uppercase;letter-spacing:.3px;line-height:1.2}
+.stats-section{background:linear-gradient(135deg,var(--dk),var(--dk2));padding:40px 16px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:900px;margin:0 auto;text-align:center;padding:0 8px;align-items:start}
+.stat-number{font-size:clamp(1.4rem,3.5vw,3rem);font-weight:900;color:var(--bl);line-height:1;margin-bottom:6px;display:block}
+.stat-label{color:var(--ac);font-size:clamp(.6rem,1.2vw,.75rem);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.3;display:block}
 .why-section{background:#fff}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1080px;margin:0 auto}
 .why-img-wrap{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3}@media(max-width:640px){.why-grid{grid-template-columns:1fr;gap:24px}.why-section{padding:40px 20px 20px}.why-img-wrap{aspect-ratio:16/9}}
@@ -88,17 +88,17 @@ h2.section-title span{color:var(--bl)}
 .carousel-inner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
 .carousel-inner::-webkit-scrollbar{display:none}
 .carousel-inner img{flex:0 0 100%;width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:start;display:block}
-.cbtn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.92);border:none;border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.18);z-index:10;display:flex;align-items:center;justify-content:center}
-.cprev{left:14px}.cnxt{right:14px}
+
+
 .cdots{display:flex;justify-content:center;gap:8px;margin-top:18px}
 .cdot{width:9px;height:9px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:all .3s}
 .cdot.on{background:var(--bl);width:24px;border-radius:5px}
 /* REVIEWS CAROUSEL */
 .reviews-section{background:#fff}
-.rev-cw{position:relative;border-radius:16px}
-.rev-ct{display:flex;gap:0;transition:transform .5s cubic-bezier(.4,0,.2,1)}
-.rev-slide{flex:0 0 100%;padding:0;box-sizing:border-box}
-@media(min-width:768px){.rev-slide{flex:0 0 33.333%}}
+
+
+
+@media(min-width:768px){}
 .rev-track{display:none}
 .review-card{background:var(--lt);border-radius:18px;padding:28px;border:1px solid #bae6fd;width:100%}
 @media(max-width:900px){.review-card{flex:0 0 calc(50% - 10px);min-width:calc(50% - 10px)}}
@@ -182,6 +182,20 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 #snsend{background:var(--bl);border:none;border-radius:10px;width:36px;height:36px;cursor:pointer;color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center}
 @media(max-width:400px){#snwin{width:calc(100vw - 24px);right:12px}}
 @media(max-width:600px){#snb{bottom:175px!important;right:16px!important}}
+
+/* ── REVIEW CAROUSEL ── */
+.rcar-outer{position:relative;max-width:1100px;margin:0 auto;padding:0 52px}
+.rcar-clip{overflow:hidden;border-radius:16px;width:100%}
+.rcar-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.rcar-slide{flex:0 0 100%;box-sizing:border-box;padding:0 8px}
+@media(min-width:700px){.rcar-slide{flex:0 0 33.3333%}}
+.rcar-btn{position:absolute;top:50%;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.15);z-index:10;display:flex;align-items:center;justify-content:center;color:#0ea5e9;transition:box-shadow .2s}
+.rcar-btn:hover{box-shadow:0 4px 20px rgba(0,0,0,.22)}
+.rcar-prev{left:0}
+.rcar-next{right:0}
+.rcar-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.rcar-dot{width:9px;height:9px;border-radius:50%;background:#bae6fd;border:none;cursor:pointer;padding:0;transition:background .2s}
+.rcar-dot.on{background:#0ea5e9}
 </style>
 </head>
 <body>
@@ -242,10 +256,10 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 </section>
 <section class="stats-section">
   <div class="stats-grid">
-    <div><div class="stat-number">100%</div><div class="stat-label">5-Star Google</div></div>
+    <div><div class="stat-number">100%</div><div class="stat-label">5-Star Reviews on Google</div></div>
     <div><div class="stat-number">6</div><div class="stat-label">Days a Week Available</div></div>
     <div><div class="stat-number">Free</div><div class="stat-label">Estimate Cost</div></div>
-    <div><div class="stat-number">Same</div><div class="stat-label">Day Service</div></div>
+    <div><div class="stat-number">Same</div><div class="stat-label">Day Service Available</div></div>
   </div>
 </section>
 <section class="why-section">
@@ -321,24 +335,79 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
 <section class="reviews-section" id="reviews">
   <div class="container">
     <div class="section-label">WHAT CUSTOMERS SAY</div>
-    <h2 class="section-title">Real Reviews from <span>Real Customers</span></h2>
-    <p class="section-sub">90+ reviews on HomeAdvisor &amp; Yelp. Here's what Olive Branch homeowners say about JMC.</p>
-    <div style="max-width:1080px;margin:0 auto">
-      <div class="rev-cw" id="revWrap">
-        <button class="cbtn cprev" id="revPrev2" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);z-index:20">&#8249;</button>
-        <button class="cbtn cnxt" id="revNext2" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);z-index:20">&#8250;</button>
-        <div style="overflow:hidden;border-radius:12px"><div class="rev-ct" id="revTrack2">
-          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in.</p><div class="reviewer"><div class="reviewer-av">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div></div>
-          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Always professional and on time with services. My first call for anything HVAC-related in Olive Branch.</p><div class="reviewer"><div class="reviewer-av">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
-          <div class="rev-slide"><div class="review-card"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"/><span style="font-size:.72rem;color:#64748b;font-weight:600">Google Review</span></div><div class="review-stars">★★★★★</div><p class="rcq">Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div></div>
-          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem and repaired my AC unit quickly and with ease. He was detail oriented. I would utilize his services again.</p><div class="reviewer"><div class="reviewer-av">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div></div>
-          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">They were very professional and actually came to the job 30 minutes before the original appointment time.</p><div class="reviewer"><div class="reviewer-av">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div></div>
-          <div class="rev-slide"><div class="review-card"><div class="review-stars">★★★★★</div><p class="rcq">Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing as he worked. We would hire him again and refer him to friends and neighbors.</p><div class="reviewer"><div class="reviewer-av">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div></div>
-        </div></div>
-      </div>
-      <div class="cnav" id="revNav"></div>
+    <h2 class="section-title">Real Reviews from <span class="hl">Real Customers</span></h2>
+    <p style="color:#64748b;font-size:1.05rem;max-width:520px;margin:0 0 40px">90+ reviews on HomeAdvisor &amp; Yelp. Here's what Olive Branch homeowners say about JMC.</p>
 
-    </div>
+    <!-- REVIEW CAROUSEL WRAPPER -->
+    <div class="rcar-outer">
+      <!-- BUTTONS outside the clip zone, vertically centered on the card area -->
+      <button class="rcar-btn rcar-prev" id="rPrev" aria-label="Previous">&#8249;</button>
+      <button class="rcar-btn rcar-next" id="rNext" aria-label="Next">&#8250;</button>
+
+      <!-- Clip window — only this has overflow:hidden -->
+      <div class="rcar-clip" id="rClip">
+        <div class="rcar-track" id="rTrack">
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"Very courteous and knowledgeable. Called and they were able to help me the same day before the snow/ice storm moved in."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Tammie S.</div><div class="reviewer-src">✓ Google · Feb 2026</div></div></div>
+            </div>
+          </div>
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"Always professional and on time with services. My first call for anything HVAC-related in Olive Branch."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#0ea5e9">L</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-src">✓ Google Review</div></div></div>
+            </div>
+          </div>
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.google.com/favicon.ico" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">Google Review</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"Jamal arrived as expected and quickly resolved the issue. He is very professional and personable. Will definitely use JMC again."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#7c3aed">S</div><div><div class="reviewer-name">Shaquan B.</div><div class="reviewer-src">✓ Google Review</div></div></div>
+            </div>
+          </div>
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"JMC was extremely punctual and professional during a last minute repair on a Sunday. He diagnosed the problem quickly and with ease."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#f59e0b">A</div><div><div class="reviewer-name">Andrea H.</div><div class="reviewer-src">✓ HomeAdvisor · Aug 2025</div></div></div>
+            </div>
+          </div>
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"They were very professional and actually came to the job 30 minutes before the original appointment time."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#10b981">S</div><div><div class="reviewer-name">Sharon M.</div><div class="reviewer-src">✓ HomeAdvisor · Jul 2025</div></div></div>
+            </div>
+          </div>
+
+          <div class="rcar-slide">
+            <div class="review-card">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><img src="https://www.gstatic.com/images/branding/product/1x/maps_24dp.png" style="width:14px;height:14px"><span style="font-size:.75rem;color:#94a3b8;font-weight:500">HomeAdvisor</span></div>
+              <div class="rev-stars">★★★★★</div>
+              <p class="rev-text">"Jamal was prompt, friendly and knowledgeable. He repaired one of our AC units and explained what he was doing. We would hire him again."</p>
+              <div class="reviewer-row"><div class="reviewer-avatar" style="background:#ec4899">R</div><div><div class="reviewer-name">Renée S.</div><div class="reviewer-src">✓ HomeAdvisor · Jun 2025</div></div></div>
+            </div>
+          </div>
+
+        </div><!-- /rcar-track -->
+      </div><!-- /rcar-clip -->
+
+      <!-- dots -->
+      <div class="rcar-dots" id="rDots"></div>
+    </div><!-- /rcar-outer -->
   </div>
 </section>
 <section class="contact-section" id="contact">
@@ -407,48 +476,7 @@ footer{background:var(--dk);padding:56px 24px 32px;color:rgba(255,255,255,.5)}
   setInterval(function(){go(cur+1)},5000);
 })();
 
-// REVIEWS CAROUSEL
-(function(){
-  var track=document.getElementById('revTrack2');
-  var nav=document.getElementById('revNav');
-  var prevBtn=document.getElementById('revPrev2');
-  var nextBtn=document.getElementById('revNext2');
-  if(!track)return;
-  var slides=track.querySelectorAll('.rev-slide');
-  var total=slides.length;
-  var cur=0;
-  function getCols(){return window.innerWidth>=768?3:1;}
-  var cols=getCols();
-  var pages=Math.ceil(total/cols);
-  function buildDots(){
-    nav.innerHTML='';
-    for(var i=0;i<pages;i++){(function(idx){
-      var d=document.createElement('button');
-      d.className='cd'+(idx===0?' on':'');
-      d.onclick=function(){goPage(idx)};
-      nav.appendChild(d);
-    })(i);}
-  }
-  function goPage(n){
-    cur=Math.max(0,Math.min(n,pages-1));
-    var slideW=document.getElementById("revWrap").offsetWidth/cols;
-    track.style.transform='translateX(-'+(cur*cols*slideW)+'px)';
-    nav.querySelectorAll('.cd').forEach(function(d,i){d.classList.toggle('on',i===cur)});
-    if(prevBtn)prevBtn.style.opacity=cur===0?'0.3':'1';
-    if(nextBtn)nextBtn.style.opacity=cur===pages-1?'0.3':'1';
-    if(prevBtn)prevBtn.style.pointerEvents=cur===0?'none':'auto';
-    if(nextBtn)nextBtn.style.pointerEvents=cur===pages-1?'none':'auto';
-  }
-  var sx=0;
-  track.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},false);
-  track.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-sx;
-    if(Math.abs(dx)>40)goPage(cur+(dx<0?1:-1));
-  },false);
-  window.addEventListener('resize',function(){cols=getCols();pages=Math.ceil(total/cols);goPage(0);});
-  buildDots();
-  goPage(0);
-})();
+
 
 // COUNTDOWN
 (function(){
@@ -484,6 +512,62 @@ function snBot(html){var msgs=document.getElementById('snmsgs');var t=document.c
 function snUser(txt){var msgs=document.getElementById('snmsgs');var m=document.createElement('div');m.className='snm user';m.innerHTML='<div class="bbl">'+txt.replace(/</g,'&lt;')+'</div>';msgs.appendChild(m);msgs.scrollTop=msgs.scrollHeight}
 function snAsk(q){document.getElementById('sninp').value=q;snSend()}
 function snSend(){var inp=document.getElementById('sninp');var t=inp.value.trim();if(!t)return;inp.value='';snUser(t);var lower=t.toLowerCase(),ans=null;for(var i=0;i<FAQS.length;i++){for(var j=0;j<FAQS[i].q.length;j++){if(lower.indexOf(FAQS[i].q[j])!==-1){ans=FAQS[i].a;break}}if(ans)break}snBot(ans||"Good question! Best to get that straight from Noel: <a href='https://calendly.com/noelgileswebdev/30min' target='_blank' style='color:#0ea5e9;font-weight:700'>Book a Call →</a>")}
+
+// ── REVIEW CAROUSEL ─────────────────────────────────────────────────────────
+(function(){
+  var track = document.getElementById('rTrack');
+  var clip  = document.getElementById('rClip');
+  var dotsEl= document.getElementById('rDots');
+  var prev  = document.getElementById('rPrev');
+  var next  = document.getElementById('rNext');
+  if(!track) return;
+
+  var slides = track.querySelectorAll('.rcar-slide');
+  var total  = slides.length;
+  var cur    = 0;
+
+  function cols(){ return window.innerWidth >= 700 ? 3 : 1; }
+  function pages(){ return Math.ceil(total / cols()); }
+
+  function buildDots(){
+    dotsEl.innerHTML = '';
+    var p = pages();
+    for(var i=0;i<p;i++){
+      (function(idx){
+        var d = document.createElement('button');
+        d.className = 'rcar-dot' + (idx===0?' on':'');
+        d.addEventListener('click', function(){ goTo(idx); });
+        dotsEl.appendChild(d);
+      })(i);
+    }
+  }
+
+  function goTo(n){
+    var p = pages();
+    cur = Math.max(0, Math.min(n, p-1));
+    var slideW = clip.offsetWidth / cols();
+    track.style.transform = 'translateX(' + (-cur * cols() * slideW) + 'px)';
+    // Update each slide width to match current cols
+    for(var i=0;i<slides.length;i++){
+      slides[i].style.flex = '0 0 ' + slideW + 'px';
+      slides[i].style.maxWidth = slideW + 'px';
+    }
+    var dots = dotsEl.querySelectorAll('.rcar-dot');
+    for(var i=0;i<dots.length;i++) dots[i].classList.toggle('on', i===cur);
+    prev.disabled = cur===0;
+    next.disabled = cur===p-1;
+  }
+
+  prev.addEventListener('click', function(){ goTo(cur-1); });
+  next.addEventListener('click', function(){ goTo(cur+1); });
+
+  window.addEventListener('resize', function(){ buildDots(); goTo(0); });
+
+  // Init after paint so offsetWidth is real
+  window.addEventListener('load', function(){ buildDots(); goTo(0); });
+  setTimeout(function(){ buildDots(); goTo(0); }, 100);
+})();
+
 </script>
 </body>
 </html>
